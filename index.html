@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>itorac | 资深 Java 架构师 & AI 专家</title>
+  <!-- 引入 Font Awesome 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,53 +23,68 @@
     </div>
   </nav>
 
-  <!-- Hero 区块 -->
-  <section class="hero">
-    <div class="hero-content">
+  <!-- Hero 区块: 图文并排 -->
+  <section class="hero-image-text">
+    <div class="hero-text">
       <h1>资深 Java 架构师</h1>
       <p>16 年大型分布式系统设计与实践经验，专注微服务与 AI 应用</p>
       <a href="#skills" class="btn">查看技能</a>
     </div>
+    <div class="hero-image">
+      <!-- 示例背景图，可替换为高质量架构相关插画 -->
+      <img src="https://source.unsplash.com/featured/400x300/?architecture,technology" alt="架构设计图示" />
+    </div>
   </section>
 
-  <!-- 专业技能 -->
+  <!-- 专业技能: 图标辅助 -->
   <section id="skills" class="section">
     <h2>💼 专业技能</h2>
     <div class="skills-grid">
       <div class="skill-group">
+        <i class="fab fa-java fa-2x icon"></i>
         <h3>Java & 并发</h3>
         <p>集合 / IO / 多线程 / 锁机制 / AQS</p>
       </div>
       <div class="skill-group">
+        <i class="fas fa-microchip fa-2x icon"></i>
         <h3>微服务 & 框架</h3>
         <p>Spring Boot / Spring Cloud / Dubbo / 服务治理</p>
       </div>
       <div class="skill-group">
+        <i class="fas fa-tachometer-alt fa-2x icon"></i>
         <h3>性能 & 调优</h3>
         <p>JVM GC / SQL 优化 / 压测 & 扩缩容</p>
       </div>
       <div class="skill-group">
+        <i class="fas fa-tools fa-2x icon"></i>
         <h3>中间件 & DevOps</h3>
         <p>Redis / Kafka / Docker / Kubernetes / Prometheus</p>
       </div>
       <div class="skill-group">
+        <i class="fas fa-database fa-2x icon"></i>
         <h3>大数据 & AI</h3>
         <p>Hadoop 生态 / Flink / 大模型集成</p>
       </div>
     </div>
   </section>
 
-  <!-- 个人优势 -->
-  <section id="strengths" class="section">
-    <h2>⭐ 个人优势</h2>
-    <p class="strength-text">16 年一线架构经验，主导日活百万级系统，擅长分布式、高并发与团队管理。</p>
-    <ul class="tags">
-      <li>🏆 系统可用性</li>
-      <li>🚀 团队领导</li>
-      <li>📈 性能优化</li>
-      <li>🤝 跨部门协作</li>
-      <li>🤖 AI 应用</li>
-    </ul>
+  <!-- 个人优势: 图文分列 -->
+  <section id="strengths" class="section strengths">
+    <div class="strengths-content">
+      <h2>⭐ 个人优势</h2>
+      <p class="strength-text">16 年一线架构经验，主导日活百万级系统，擅长分布式、高并发与团队管理。</p>
+      <ul class="tags">
+        <li><i class="fas fa-award"></i> 系统可用性</li>
+        <li><i class="fas fa-users"></i> 团队领导</li>
+        <li><i class="fas fa-chart-line"></i> 性能优化</li>
+        <li><i class="fas fa-handshake"></i> 跨部门协作</li>
+        <li><i class="fas fa-robot"></i> AI 应用</li>
+      </ul>
+    </div>
+    <div class="strengths-image">
+      <!-- 示例团队协作图 -->
+      <img src="https://source.unsplash.com/featured/200x200/?teamwork" alt="团队协作图示" />
+    </div>
   </section>
 
   <!-- 项目精选 -->
