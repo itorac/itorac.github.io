@@ -7,60 +7,59 @@
   <title>itorac | 资深 Java 架构师 & AI 专家</title>
   <!-- 引入 Font Awesome 图标库 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
   <!-- 内联样式 -->
   <style>
-  /* 全局重置 */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background: #f9f9f9; }
+    /* 全局重置 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background: #f9f9f9; }
 
-  /* 导航 */
-  .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #007acc; }
-  .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none; }
-  .navbar .nav-links a { margin-left: 1rem; color: #e0f2ff; text-decoration: none; font-size: 0.9rem; }
-  .navbar .nav-links a:hover { color: #fff; }
+    /* 导航 */
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #007acc; }
+    .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none; }
+    .navbar .nav-links a { margin-left: 1rem; color: #e0f2ff; text-decoration: none; font-size: 0.9rem; }
+    .navbar .nav-links a:hover { color: #fff; }
 
-  /* Hero 图文并排 */
-  .hero-image-text { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; background: #fff; padding: 4rem 2rem; border-bottom: 4px solid #007acc; }
-  .hero-text { flex: 1 1 300px; max-width: 400px; }
-  .hero-text h1 { font-size: 3rem; color: #007acc; margin-bottom: 1rem; }
-  .hero-text p { font-size: 1.2rem; color: #555; margin-bottom: 1.5rem; }
-  .btn { display: inline-block; padding: 0.8rem 1.5rem; background: #007acc; color: #fff; border-radius: 25px; font-weight: bold; text-decoration: none; }
-  .btn:hover { background: #005fa3; }
-  .hero-image img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    /* Hero 图文并排 */
+    .hero-image-text { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; background: #fff; padding: 4rem 2rem; border-bottom: 4px solid #007acc; }
+    .hero-text { flex: 1 1 300px; max-width: 400px; }
+    .hero-text h1 { font-size: 3rem; color: #007acc; margin-bottom: 1rem; }
+    .hero-text p { font-size: 1.2rem; color: #555; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; padding: 0.8rem 1.5rem; background: #007acc; color: #fff; border-radius: 25px; font-weight: bold; text-decoration: none; }
+    .btn:hover { background: #005fa3; }
+    .hero-image img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 
-  /* 通用区块 */
-  .section { max-width: 800px; margin: 4rem auto; padding: 0 1rem; }
-  .section h2 { font-size: 2rem; color: #007acc; margin-bottom: 1rem; text-align: center; }
+    /* 通用区块 */
+    .section { max-width: 800px; margin: 4rem auto; padding: 0 1rem; }
+    .section h2 { font-size: 2rem; color: #007acc; margin-bottom: 1rem; text-align: center; }
 
-  /* 技能网格 */
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-  .skill-group { background: #fff; padding: 1.5rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; }
-  .skill-group .icon { margin-bottom: 0.8rem; color: #007acc; }
-  .skill-group h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: #007acc; }
-  .skill-group p { font-size: 0.95rem; color: #666; }
+    /* 技能网格 */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .skill-group { background: #fff; padding: 1.5rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; }
+    .skill-group .icon { margin-bottom: 0.8rem; color: #007acc; }
+    .skill-group h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: #007acc; }
+    .skill-group p { font-size: 0.95rem; color: #666; }
 
-  /* 个人优势 */
-  .strengths { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; background: #fff; padding: 2rem; border-left: 4px solid #007acc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-  .strengths-image img { max-width: 200px; height: auto; border-radius: 8px; }
-  .strengths-content { flex: 1 1 300px; }
-  .strengths-content h2 { margin-bottom: 1rem; }
-  .strength-text { margin-bottom: 1rem; font-size: 1rem; color: #555; }
-  .tags { list-style: none; display: flex; flex-wrap: wrap; }
-  .tags li { background: #e0f2ff; color: #007acc; padding: 0.4rem 0.8rem; border-radius: 12px; margin: 0.2rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; }
+    /* 个人优势 图文分列 */
+    .strengths { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; background: #fff; padding: 2rem; border-left: 4px solid #007acc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .strengths-image img { max-width: 200px; height: auto; border-radius: 8px; }
+    .strengths-content { flex: 1 1 300px; }
+    .strengths-content h2 { margin-bottom: 1rem; }
+    .strength-text { margin-bottom: 1rem; font-size: 1rem; color: #555; }
+    .tags { list-style: none; display: flex; flex-wrap: wrap; }
+    .tags li { background: #e0f2ff; color: #007acc; padding: 0.4rem 0.8rem; border-radius: 12px; margin: 0.2rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; }
 
-  /* 项目卡片 */
-  .projects-grid { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; }
-  .project-card { background: #fff; padding: 1rem 1.5rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; width: 200px; }
-  .project-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; color: #007acc; }
-  .project-card p a { color: #555; text-decoration: none; font-size: 0.9rem; }
-  .project-card p a:hover { color: #007acc; }
+    /* 项目卡片 */
+    .projects-grid { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; }
+    .project-card { background: #fff; padding: 1rem 1.5rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; width: 200px; }
+    .project-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; color: #007acc; }
+    .project-card p a { color: #555; text-decoration: none; font-size: 0.9rem; }
+    .project-card p a:hover { color: #007acc; }
 
-  /* 页脚 */
-  .footer { background: #007acc; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #e0f2ff; }
-  .footer a { color: #e0f2ff; text-decoration: none; }
-  .footer a:hover { color: #fff; }
+    /* 页脚 */
+    .footer { background: #007acc; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #e0f2ff; }
+    .footer a { color: #e0f2ff; text-decoration: none; }
+    .footer a:hover { color: #fff; }
   </style>
 </head>
 <body>
@@ -85,8 +84,8 @@
       <a href="#skills" class="btn">查看技能</a>
     </div>
     <div class="hero-image">
-      <!-- 示例背景图，可替换为高质量架构相关插画 -->
-      <img src="https://source.unsplash.com/featured/400x300/?architecture,technology" alt="架构设计图示" />
+      <!-- 使用稳定的占位图示例 -->
+      <img src="https://via.placeholder.com/400x300?text=架构+设计" alt="架构设计图示" />
     </div>
   </section>
 
@@ -136,8 +135,8 @@
       </ul>
     </div>
     <div class="strengths-image">
-      <!-- 示例团队协作图 -->
-      <img src="https://source.unsplash.com/featured/200x200/?teamwork" alt="团队协作图示" />
+      <!-- 使用稳定的占位图示例 -->
+      <img src="https://via.placeholder.com/200x200?text=团队+协作" alt="团队协作图示" />
     </div>
   </section>
 
