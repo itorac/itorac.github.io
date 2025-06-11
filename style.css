@@ -6,17 +6,17 @@ html { scroll-behavior: smooth; }
 body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background: #f9f9f9; }
 
 /* 导航 */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-.navbar .logo { font-size: 1.5rem; font-weight: bold; color: #007acc; text-decoration: none; }
-.navbar .nav-links a { margin-left: 1rem; color: #555; text-decoration: none; font-size: 0.9rem; }
-.navbar .nav-links a:hover { color: #007acc; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #007acc; }
+.navbar .logo { font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none; }
+.navbar .nav-links a { margin-left: 1rem; color: #e0f2ff; text-decoration: none; font-size: 0.9rem; }
+.navbar .nav-links a:hover { color: #fff; }
 
 /* Hero 区块 */
-.hero { display: flex; align-items: center; justify-content: center; height: 60vh; background: linear-gradient(135deg, #007acc 0%, #00aaff 100%); color: #fff; text-align: center; }
-.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
-.hero-content p { font-size: 1.2rem; margin-bottom: 1.5rem; }
-.btn { display: inline-block; padding: 0.8rem 1.5rem; background: #fff; color: #007acc; border-radius: 25px; font-weight: bold; text-decoration: none; }
-.btn:hover { background: #e6f7ff; }
+.hero { display: flex; align-items: center; justify-content: center; height: 60vh; background: #fff; text-align: center; border-bottom: 4px solid #007acc; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; color: #007acc; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 1.5rem; color: #555; }
+.btn { display: inline-block; padding: 0.8rem 1.5rem; background: #007acc; color: #fff; border-radius: 25px; font-weight: bold; text-decoration: none; }
+.btn:hover { background: #005fa3; }
 
 /* 版块通用 */
 .section { max-width: 800px; margin: 4rem auto; padding: 0 1rem; }
@@ -24,24 +24,24 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background
 
 /* 技能网格 */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-.skill-group { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-.skill-group h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: #333; }
+.skill-group { background: #fff; padding: 1rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.skill-group h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: #007acc; }
 .skill-group p { font-size: 0.95rem; color: #666; }
 
 /* 个人优势 */
-.strength-text { margin-bottom: 1rem; font-size: 1rem; }
+.strength-text { margin-bottom: 1rem; font-size: 1rem; color: #555; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; }
-.tags li { background: #007acc; color: #fff; padding: 0.4rem 0.8rem; border-radius: 12px; margin: 0.2rem; font-size: 0.85rem; }
+.tags li { background: #e0f2ff; color: #007acc; padding: 0.4rem 0.8rem; border-radius: 12px; margin: 0.2rem; font-size: 0.85rem; }
 
 /* 项目卡片 */
 .projects-grid { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; }
-.project-card { background: #fff; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; width: 200px; }
+.project-card { background: #fff; padding: 1rem 1.5rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; width: 200px; }
 .project-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; color: #007acc; }
 .project-card p a { color: #555; text-decoration: none; font-size: 0.9rem; }
 .project-card p a:hover { color: #007acc; }
 
 /* 页脚 */
-.footer { background: #fff; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #777; }
-.footer a { color: #777; text-decoration: none; }
-.footer a:hover { color: #007acc; }
+.footer { background: #007acc; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #e0f2ff; }
+.footer a { color: #e0f2ff; text-decoration: none; }
+.footer a:hover { color: #fff; }
 </style>
