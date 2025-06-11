@@ -1,61 +1,102 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>itorac 主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>itorac 的个人主页</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>欢迎来到 itorac 的个人主页</h1>
-  <p><strong>itorac</strong>，一名拥有 <strong>16 年经验</strong> 的 Java 架构师，专注于微服务与 AI 应用。</p>
+  <!-- 顶部导航 -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">itorac</a>
+    <div class="nav-links">
+      <a href="about.html">关于我</a>
+      <a href="contact.html">联系我</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="terms.html">服务条款</a>
+      <a href="license.html">开源许可</a>
+      <a href="disclaimer.html">免责声明</a>
+    </div>
+  </nav>
 
-  <h2>💼 专业技能</h2>
-  <ol>
-    <li>精通 Java 基础知识，集合、IO、多线程，良好的面向对象设计思想与设计模式应用。</li>
-    <li>精通并发编程，深入理解锁机制、线程池、AQS 等，具备实战经验。</li>
-    <li>精通 JVM 原理、垃圾回收算法与调优，具备线上故障排查能力。</li>
-    <li>精通 Spring、SpringMvc、MyBatis、SpringBoot 等核心框架。</li>
-    <li>精通 SpringCloud、Dubbo、SpringCloud Alibaba 等微服务体系，主导服务治理与分层。</li>
-    <li>精通 MySQL 索引、事务、锁机制及 SQL 性能优化。</li>
-    <li>精通 Redis，熟悉集群、持久化、哨兵机制与底层实现。</li>
-    <li>熟悉 ZooKeeper，理解 Paxos、ZAB、CAP 理论。</li>
-    <li>掌握分布式解决方案：分布式锁、ID、事务、链路追踪、幂等、预警监控等。</li>
-    <li>有 ELK、MQ、MongoDB、Nginx、Netty 等实际工作经验。</li>
-    <li>熟悉大数据生态：Hadoop、Hive、HBase、Spark、Flink 等。</li>
-    <li>搭建过监控平台：Collectd、InfluxDB、Prometheus、Grafana。</li>
-    <li>熟练 DevOps：GitLab、Docker、Kubernetes、Jenkins。</li>
-    <li>保障双十一、618 电商高峰全链路压测、自动扩缩容。</li>
-    <li>主导 SaaS 平台搭建并上线支付宝小程序平台。</li>
-    <li>熟悉云服务器规划、安全、CDN、DNS、HTTPS、域名管理等。</li>
-  </ol>
+  <!-- Hero 区块 -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>16 年 Java 架构师</h1>
+      <p>专注微服务与 AI 应用，构建高并发分布式系统</p>
+      <a href="#skills" class="btn">了解技能</a>
+    </div>
+  </section>
 
-  <h2>⭐ 个人优势</h2>
-  <ul>
-    <li>十年以上开发与管理经验，核心系统支持日活百万，PV 过亿，用户量 3000 万。</li>
-    <li>具备构建高并发、低延迟分布式系统的实战经验。</li>
-    <li>至今仍是公司核心代码开发者。</li>
-    <li>曾带领 20+ 人团队，组建技术梯队，经验涵盖电商、供应链、SaaS。</li>
-    <li>擅长跨部门沟通、团队协作、目标执行与效率提升。</li>
-  </ul>
+  <!-- 专业技能 -->
+  <section id="skills" class="section">
+    <h2>💼 专业技能</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Java & 并发</h3>
+        <p>集合 / IO / 多线程 / 锁机制 / AQS</p>
+      </div>
+      <div class="skill-group">
+        <h3>微服务 & 框架</h3>
+        <p>Spring Boot / Spring Cloud / Dubbo / 服务治理</p>
+      </div>
+      <div class="skill-group">
+        <h3>性能 & 调优</h3>
+        <p>JVM GC / SQL 优化 / 压测 & 扩缩容</p>
+      </div>
+      <div class="skill-group">
+        <h3>中间件 & DevOps</h3>
+        <p>Redis / Kafka / Docker / Kubernetes / Prometheus</p>
+      </div>
+      <div class="skill-group">
+        <h3>大数据 & AI</h3>
+        <p>Hadoop 生态 / Flink / 大模型集成</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>🔗 我的链接</h2>
-  <ul>
-    <li>GitHub：<a href="https://github.com/itorac" target="_blank">https://github.com/itorac</a></li>
-    <li>博客：<a href="https://blog.csdn.net/itorac" target="_blank">https://blog.csdn.net/itorac</a></li>
-    <li>邮箱：<a href="mailto:itorac@sina.com">itorac@sina.com</a></li>
-  </ul>
+  <!-- 个人优势 -->
+  <section id="strengths" class="section">
+    <h2>⭐ 个人优势</h2>
+    <p class="strength-text">16 年一线架构经验，主导日活百万级系统，擅长分布式、高并发与团队管理。</p>
+    <ul class="tags">
+      <li>🏆 系统可用性</li>
+      <li>🚀 团队领导</li>
+      <li>📈 性能优化</li>
+      <li>🤝 跨部门协作</li>
+      <li>🤖 AI 应用</li>
+    </ul>
+  </section>
 
-  <p>感谢访问，欢迎交流合作！</p>
-  <footer>
-  <hr>
-  <p>
+  <!-- 项目精选 -->
+  <section id="projects" class="section">
+    <h2>🚀 项目精选</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>开源仓库</h3>
+        <p><a href="https://github.com/itorac" target="_blank">github.com/itorac</a></p>
+      </div>
+      <div class="project-card">
+        <h3>技术博客</h3>
+        <p><a href="https://blog.csdn.net/itorac" target="_blank">blog.csdn.net/itorac</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚链接 -->
+  <footer class="footer">
+    <hr>
+    <p>
     <a href="privacy.html"  target="_blank">隐私政策</a> |
     <a href="terms.html"  target="_blank">服务条款</a> |
     <a href="license.html" target="_blank">开源许可</a> |
     <a href="disclaimer.html" target="_blank">免责声明</a> |
     <a href="contact.html" target="_blank">联系方式</a> 
   </p>
-  <p>&copy; 2025 itorac. 保留所有权利。</p>
-</footer>
+    <p>&copy; 2025 itorac. 保留所有权利。</p>
+  </footer>
 </body>
 </html>
+
