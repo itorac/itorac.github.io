@@ -11,27 +11,34 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background
 .navbar .nav-links a { margin-left: 1rem; color: #e0f2ff; text-decoration: none; font-size: 0.9rem; }
 .navbar .nav-links a:hover { color: #fff; }
 
-/* Hero 区块 */
-.hero { display: flex; align-items: center; justify-content: center; height: 60vh; background: #fff; text-align: center; border-bottom: 4px solid #007acc; }
-.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; color: #007acc; }
-.hero-content p { font-size: 1.2rem; margin-bottom: 1.5rem; color: #555; }
+/* Hero 图文并排 */
+.hero-image-text { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; background: #fff; padding: 4rem 2rem; border-bottom: 4px solid #007acc; }
+.hero-text { flex: 1 1 300px; max-width: 400px; }
+.hero-text h1 { font-size: 3rem; color: #007acc; margin-bottom: 1rem; }
+.hero-text p { font-size: 1.2rem; color: #555; margin-bottom: 1.5rem; }
 .btn { display: inline-block; padding: 0.8rem 1.5rem; background: #007acc; color: #fff; border-radius: 25px; font-weight: bold; text-decoration: none; }
 .btn:hover { background: #005fa3; }
+.hero-image img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 
 /* 版块通用 */
 .section { max-width: 800px; margin: 4rem auto; padding: 0 1rem; }
-.section h2 { font-size: 2rem; color: #007acc; margin-bottom: 1rem; }
+.section h2 { font-size: 2rem; color: #007acc; margin-bottom: 1rem; text-align: center; }
 
 /* 技能网格 */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-.skill-group { background: #fff; padding: 1rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.skill-group { background: #fff; padding: 1.5rem; border-left: 4px solid #007acc; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; }
+.skill-group .icon { margin-bottom: 0.8rem; color: #007acc; }
 .skill-group h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: #007acc; }
 .skill-group p { font-size: 0.95rem; color: #666; }
 
-/* 个人优势 */
+/* 个人优势 图文分列 */
+.strengths { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; background: #fff; padding: 2rem; border-left: 4px solid #007acc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.strengths-content { flex: 1 1 300px; }
+.strengths-content h2 { margin-bottom: 1rem; }
 .strength-text { margin-bottom: 1rem; font-size: 1rem; color: #555; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; }
-.tags li { background: #e0f2ff; color: #007acc; padding: 0.4rem 0.8rem; border-radius: 12px; margin: 0.2rem; font-size: 0.85rem; }
+.tags li { background: #e0f2ff; color: #007acc; padding: 0.4rem 0.8rem; border-radius: 12px; margin: 0.2rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; }
+.strengths-image img { max-width: 200px; height: auto; border-radius: 8px; }
 
 /* 项目卡片 */
 .projects-grid { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; }
