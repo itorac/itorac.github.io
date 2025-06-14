@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Tang | Enterprise Architect & AI Specialist</title>
+  <meta name="description" content="Michael Tang – Enterprise Architect & AI Specialist with 16+ years in distributed systems and intelligent solutions" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #333;
+    }
+    nav {
+      background: #1f2937;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    nav .nav-links a {
+      color: #cbd5e1;
+      margin-left: 1.2rem;
+      text-decoration: none;
+    }
+    nav .nav-links a:hover {
+      color: white;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 2rem;
+      background: white;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .hero-text {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      color: #1f2937;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      padding: 0.8rem 1.5rem;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    .section {
+      max-width: 960px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #1f2937;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-left: 4px solid #2563eb;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .card i {
+      color: #2563eb;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1e40af;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+    footer {
+      background: #1f2937;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #cbd5e1;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <nav>
+      <a href="index.html" class="logo">Michael Tang</a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#projects">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>{{ title }}</h1>
+        <p>{{ subtitle }}</p>
+        <a href="#skills" class="btn">Explore Skills</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/400x300/007acc/ffffff?text=Architecture+Design" alt="Architecture Design" />
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>💼 Professional Skills</h2>
+      <div class="grid">
+        <div v-for="skill in skills" :key="skill.title" class="card">
+          <i :class="skill.icon"></i>
+          <h3>{{ skill.title }}</h3>
+          <p>{{ skill.desc }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="strengths" class="section">
+      <h2>⭐ Key Strengths</h2>
+      <div class="grid">
+        <div v-for="tag in strengths" :key="tag.text" class="card">
+          <i :class="tag.icon"></i>
+          <h3>{{ tag.text }}</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>🚀 Highlighted Projects</h2>
+      <div class="grid">
+        <div v-for="project in projects" :key="project.name" class="card">
+          <h3>{{ project.name }}</h3>
+          <p><a :href="project.link" target="_blank">{{ project.link }}</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Michael Tang. All rights reserved.</p>
+      <p>
+        <a href="privacy.html">Privacy</a> |
+        <a href="terms.html">Terms</a> |
+        <a href="license.html">License</a> |
+        <a href="disclaimer.html">Disclaimer</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          title: "Enterprise Architect & AI Specialist",
+          subtitle: "16+ years of hands-on experience in distributed systems, microservices, and intelligent solutions",
+          skills: [
+            { title: "Java & Concurrency", icon: "fab fa-java", desc: "Collections / IO / Threads / Locks / AQS" },
+            { title: "Microservices", icon: "fas fa-network-wired", desc: "Spring Boot / Spring Cloud / Dubbo / Service Governance" },
+            { title: "Performance", icon: "fas fa-chart-line", desc: "JVM / SQL Optimization / Scaling & Load Testing" },
+            { title: "Middleware & DevOps", icon: "fas fa-tools", desc: "Redis / Kafka / Docker / K8s / Prometheus" },
+            { title: "Big Data & AI", icon: "fas fa-brain", desc: "Flink / LLM Integration / Hadoop Ecosystem" }
+          ],
+          strengths: [
+            { text: "High Availability", icon: "fas fa-award" },
+            { text: "Team Leadership", icon: "fas fa-users" },
+            { text: "Optimization", icon: "fas fa-rocket" },
+            { text: "Collaboration", icon: "fas fa-handshake" },
+            { text: "AI Integration", icon: "fas fa-robot" }
+          ],
+          projects: [
+            { name: "GitHub", link: "https://github.com/itorac" },
+            { name: "Technical Blog", link: "https://blog.csdn.net/itorac" }
+          ]
+        };
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
