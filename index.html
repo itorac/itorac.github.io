@@ -1,203 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Michael Tang – Enterprise Architect & AI Specialist with 16+ years in distributed systems and intelligent solutions">
   <title>Michael Tang | Enterprise Architect & AI Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root {
-      --primary: #3b82f6;
-      --dark: #1f2937;
-      --gray: #6b7280;
-      --light: #f9fafc;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 1.5rem;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #333; background: #f9fafc; }
+
     .navbar {
-      background: var(--dark);
-      padding: 1.2rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 2rem; background: #1f2937;
     }
     .navbar .logo {
-      color: #fff;
-      font-size: 1.6rem;
-      font-weight: 800;
-      text-decoration: none;
+      font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none;
     }
-    .nav-links a {
-      margin-left: 1.5rem;
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s;
+    .navbar .nav-links a {
+      margin-left: 1.2rem; color: #cbd5e1; text-decoration: none; font-size: 0.95rem;
     }
-    .nav-links a:hover {
-      color: #fff;
-    }
+    .navbar .nav-links a:hover { color: #fff; }
 
     .hero-image-text {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 0;
-      background: #fff;
-      gap: 2rem;
-      border-bottom: 1px solid #e5e7eb;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: 2rem; background: #fff; padding: 4rem 2rem; border-bottom: 1px solid #e5e7eb;
     }
-    .hero-text {
-      flex: 1 1 300px;
-      max-width: 500px;
-    }
+    .hero-text { flex: 1 1 300px; max-width: 500px; }
     .hero-text h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      color: var(--dark);
+      font-size: 2.75rem; color: #1f2937; font-weight: 800; margin-bottom: 1rem;
     }
     .hero-text p {
-      font-size: 1.15rem;
-      color: var(--gray);
-      margin-bottom: 1.8rem;
+      font-size: 1.1rem; color: #4b5563; margin-bottom: 1.5rem;
     }
     .btn {
-      padding: 0.8rem 1.6rem;
-      background: var(--primary);
-      color: #fff;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
+      display: inline-block; padding: 0.8rem 1.5rem; background: #2563eb; color: #fff;
+      border-radius: 8px; font-weight: 600; text-decoration: none;
     }
-    .btn:hover {
-      background: #2563eb;
+    .btn:hover { background: #1d4ed8; }
+    .hero-image img {
+      max-width: 100%; height: auto; border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
-    .section {
-      padding: 4rem 0;
-    }
+
+    .section { max-width: 960px; margin: 4rem auto; padding: 0 1.5rem; }
     .section h2 {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      color: var(--dark);
+      font-size: 2rem; color: #1f2937; margin-bottom: 1.5rem; text-align: center; font-weight: 700;
     }
-    .skills-grid,
-    .projects-grid {
-      display: grid;
-      gap: 1.8rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;
     }
-    .skill-group,
-    .project-card {
-      background: #fff;
-      border-left: 4px solid var(--primary);
-      padding: 1.5rem;
-      border-radius: 0 8px 8px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      text-align: center;
+    .skill-group {
+      background: #fff; padding: 1.5rem; border-left: 4px solid #2563eb;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: center;
     }
-    .skill-group .icon {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    .skill-group h3 {
-      font-size: 1.1rem;
-      color: #1e40af;
-      margin-bottom: 0.5rem;
-    }
-    .skill-group p {
-      font-size: 0.95rem;
-      color: var(--gray);
-    }
+    .skill-group .icon { margin-bottom: 1rem; color: #2563eb; }
+    .skill-group h3 { margin-bottom: 0.6rem; font-size: 1.1rem; color: #1e40af; }
+    .skill-group p { font-size: 0.95rem; color: #6b7280; }
+
     .strengths {
-      background: #f3f4f6;
-      border-radius: 12px;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;
+      background: #f3f4f6; padding: 2rem; border-radius: 12px;
     }
-    .tags {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .strengths-image img {
+      max-width: 220px; height: auto; border-radius: 12px;
     }
+    .strengths-content { flex: 1 1 300px; }
+    .strengths-content h2 { margin-bottom: 1rem; }
+    .strength-text { margin-bottom: 1rem; font-size: 1rem; color: #4b5563; }
+    .tags { list-style: none; display: flex; flex-wrap: wrap; }
     .tags li {
-      background: #dbeafe;
-      color: #1e40af;
-      padding: 0.4rem 0.8rem;
-      border-radius: 12px;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      background: #dbeafe; color: #1e40af; padding: 0.4rem 0.8rem; border-radius: 12px;
+      margin: 0.2rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem;
     }
+
+    .projects-grid { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+    .project-card {
+      background: #fff; padding: 1.2rem; border-left: 4px solid #2563eb;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: center; width: 260px;
+    }
+    .project-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; color: #1d4ed8; }
+    .project-card p a { color: #4b5563; text-decoration: none; font-size: 0.9rem; }
+    .project-card p a:hover { color: #1e40af; }
+
     .footer {
-      background: var(--dark);
-      color: #cbd5e1;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
+      background: #1f2937; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #cbd5e1;
     }
-    .footer a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    .footer a:hover {
-      color: #fff;
-    }
+    .footer a { color: #cbd5e1; text-decoration: none; }
+    .footer a:hover { color: #fff; }
   </style>
 </head>
 <body>
-  <header class="navbar container">
-    <a href="#" class="logo">Michael Tang</a>
-    <nav class="nav-links">
+  <nav class="navbar">
+    <a href="index.html" class="logo">Michael Tang</a>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#strengths">Strengths</a>
+      <a href="#projects">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="license.html">License</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main class="container">
-    <!-- Hero, Skills, Strengths, Projects... 内容结构保持不变 -->
-  </main>
+  <section class="hero-image-text">
+    <div class="hero-text">
+      <h1>Enterprise Architect & AI Specialist</h1>
+      <p>16+ years of hands-on experience in distributed systems, microservices, and intelligent solutions</p>
+      <a href="#skills" class="btn">Explore Skills</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://placehold.co/400x300/007acc/ffffff?text=Architecture+Design" alt="Architecture Design" />
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>💼 Professional Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <i class="fab fa-java fa-2x icon"></i>
+        <h3>Java & Concurrency</h3>
+        <p>Collections / IO / Threads / Locks / AQS</p>
+      </div>
+      <div class="skill-group">
+        <i class="fas fa-network-wired fa-2x icon"></i>
+        <h3>Microservices</h3>
+        <p>Spring Boot / Spring Cloud / Dubbo / Service Governance</p>
+      </div>
+      <div class="skill-group">
+        <i class="fas fa-chart-line fa-2x icon"></i>
+        <h3>Performance</h3>
+        <p>JVM / SQL Optimization / Scaling & Load Testing</p>
+      </div>
+      <div class="skill-group">
+        <i class="fas fa-tools fa-2x icon"></i>
+        <h3>Middleware & DevOps</h3>
+        <p>Redis / Kafka / Docker / K8s / Prometheus</p>
+      </div>
+      <div class="skill-group">
+        <i class="fas fa-brain fa-2x icon"></i>
+        <h3>Big Data & AI</h3>
+        <p>Flink / LLM Integration / Hadoop Ecosystem</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="strengths" class="section strengths">
+    <div class="strengths-content">
+      <h2>⭐ Key Strengths</h2>
+      <p class="strength-text">Led enterprise-grade architecture with millions of daily active users. Expert in scalability, reliability, and cross-team leadership.</p>
+      <ul class="tags">
+        <li><i class="fas fa-award"></i> High Availability</li>
+        <li><i class="fas fa-users"></i> Team Leadership</li>
+        <li><i class="fas fa-rocket"></i> Optimization</li>
+        <li><i class="fas fa-handshake"></i> Collaboration</li>
+        <li><i class="fas fa-robot"></i> AI Integration</li>
+      </ul>
+    </div>
+    <div class="strengths-image">
+      <img src="https://placehold.co/200x200/007acc/ffffff?text=Team+Collaboration" alt="Team Collaboration" />
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>🚀 Highlighted Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/itorac" target="_blank" rel="noopener">github.com/itorac</a></p>
+      </div>
+      <div class="project-card">
+        <h3>Technical Blog</h3>
+        <p><a href="https://blog.csdn.net/itorac" target="_blank" rel="noopener">blog.csdn.net/itorac</a></p>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
+    <p>&copy; 2025 Michael Tang. All rights reserved.</p>
     <p>
       <a href="privacy.html">Privacy</a> |
       <a href="terms.html">Terms</a> |
       <a href="license.html">License</a> |
       <a href="disclaimer.html">Disclaimer</a>
     </p>
-    <p>&copy; 2025 Michael Tang. All rights reserved.</p>
   </footer>
 </body>
 </html>
